@@ -1,0 +1,25 @@
+
+var x=0;
+var timer=0;
+
+function spinTimer(){
+    timer=setInterval(spin,5);
+
+}
+
+function spin(){
+
+   let img=document.getElementById('spinIt');
+   let img2=document.getElementById('spinIt2');
+   
+    if (x==360){
+        clearInterval(spinTimer);
+       
+        }
+        else{
+            img.style.transform='rotate('+x+'deg)';
+            img2.style.transform='rotate('+x+'deg)';
+            x=x+1;
+        
+        }
+    }
